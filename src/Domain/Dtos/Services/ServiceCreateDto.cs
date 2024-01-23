@@ -1,14 +1,10 @@
-﻿namespace Domain.Entities;
+﻿namespace Domain.Dtos.Services;
 
-public class Service
+public class ServiceCreateDto
 {
-    public int Id { get; set; }
     public int CategoryId { get; set; }
     public int SpecializationId { get; set; }
     public string Name { get; set; } = null!;
     public decimal Price { get; set; }
     public bool IsActive { get; set; }
-    
-    public Category Category { get; set; } = null!;
-    public Specialization Specialization { get; set; } = null!;
 }
