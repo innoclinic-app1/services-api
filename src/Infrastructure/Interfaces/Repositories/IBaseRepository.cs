@@ -2,11 +2,11 @@
 
 public interface IBaseRepository<T> where T: class
 {
-    Task InsertAsync(T entity, CancellationToken cancellation = default);
+    Task InsertAsync(T specialization, CancellationToken cancellation = default);
     
     Task RemoveAsync(int id, CancellationToken cancellation = default);
     
-    Task UpdateAsync(T entity, CancellationToken cancellation = default);
+    Task UpdateAsync(T specialization, CancellationToken cancellation = default);
     
     Task<T> GetByIdAsync(int id, CancellationToken cancellation = default);
     
