@@ -4,5 +4,5 @@ namespace Infrastructure.Interfaces.Repositories;
 
 public interface ISpecializationRepository : IBaseRepository<Specialization>
 {
-    Task ChangeStatusAsync(int id, bool status);
+    Task ChangeStatusAsync(int id, bool status, CancellationToken cancellation = default);
 }
