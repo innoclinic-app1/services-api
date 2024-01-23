@@ -4,5 +4,5 @@ namespace Infrastructure.Interfaces.Services;
 
 public interface ISpecializationService : IBaseService<SpecializationDto, SpecializationCreateDto, SpecializationUpdateDto>
 {
-    Task<SpecializationDto> ChangeStatusAsync(int id, bool status, CancellationToken cancellation = default);
+    Task ChangeStatusAsync(int id, bool status, CancellationToken cancellation = default);
 }
