@@ -19,7 +19,7 @@ public abstract class BaseService<TEntity, TDto, TCreateDto, TUpdateDto> :
         await Repository.RemoveAsync(id, cancellation);
     }
 
-    public async Task<TDto> GetByIdAsync(int id, CancellationToken cancellation = default)
+    public async Task<TDto> GetOneAsync(int id, CancellationToken cancellation = default)
     {
         var entity = await Repository.GetByIdAsync(id, cancellation);
 
